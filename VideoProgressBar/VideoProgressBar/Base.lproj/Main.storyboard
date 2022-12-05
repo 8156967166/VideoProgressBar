@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="VideoProgressBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-Ev-KRc">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jod-f1-p8l">
+                                        <rect key="frame" x="438" y="197" width="20" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUL-JH-fU9">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="playPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNG-4C-BGw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kUL-JH-fU9" secondAttribute="trailing" id="3zI-rW-DuX"/>
+                                            <constraint firstItem="kUL-JH-fU9" firstAttribute="top" secondItem="Jod-f1-p8l" secondAttribute="top" id="IPr-x7-UK2"/>
+                                            <constraint firstItem="kUL-JH-fU9" firstAttribute="leading" secondItem="Jod-f1-p8l" secondAttribute="leading" id="hAT-SX-6Cu"/>
+                                            <constraint firstAttribute="height" constant="20" id="j2f-QQ-MhW"/>
+                                            <constraint firstAttribute="width" constant="20" id="kGy-5r-A7V"/>
+                                            <constraint firstAttribute="bottom" secondItem="kUL-JH-fU9" secondAttribute="bottom" id="mto-wo-fxW"/>
+                                        </constraints>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jck-r7-4Ab">
+                                        <rect key="frame" x="16" y="329" width="807" height="31"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="playbackSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eM1-ZS-La7"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVI-Go-p9Y">
+                                        <rect key="frame" x="834.5" y="334.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Jod-f1-p8l" firstAttribute="centerX" secondItem="1Sk-Ev-KRc" secondAttribute="centerX" id="2L4-V1-RqR"/>
+                                    <constraint firstAttribute="trailing" secondItem="JVI-Go-p9Y" secondAttribute="trailing" constant="20" id="P5A-7T-kbf"/>
+                                    <constraint firstItem="Jod-f1-p8l" firstAttribute="centerY" secondItem="1Sk-Ev-KRc" secondAttribute="centerY" id="PZX-zA-PEr"/>
+                                    <constraint firstItem="Jck-r7-4Ab" firstAttribute="leading" secondItem="1Sk-Ev-KRc" secondAttribute="leading" constant="18" id="Q1G-x2-CVh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jck-r7-4Ab" secondAttribute="bottom" constant="55" id="YbY-Jb-qJ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jck-r7-4Ab" secondAttribute="trailing" constant="75" id="eD8-Lx-xCc"/>
+                                    <constraint firstAttribute="bottom" secondItem="JVI-Go-p9Y" secondAttribute="bottom" constant="59" id="tqF-yR-hsG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Sk-Ev-KRc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xqf-Wq-rfa"/>
+                            <constraint firstAttribute="bottom" secondItem="1Sk-Ev-KRc" secondAttribute="bottom" id="b2a-AI-tUX"/>
+                            <constraint firstItem="1Sk-Ev-KRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vK5-XJ-Okr"/>
+                            <constraint firstAttribute="trailing" secondItem="1Sk-Ev-KRc" secondAttribute="trailing" id="y0P-ad-cvG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="kUL-JH-fU9" id="Ujx-va-8g5"/>
+                        <outlet property="progressSlider" destination="Jck-r7-4Ab" id="I29-aE-R0j"/>
+                        <outlet property="timeRemainingLabel" destination="JVI-Go-p9Y" id="Hpr-Vd-XjN"/>
+                        <outlet property="videoPlayerView" destination="1Sk-Ev-KRc" id="KVB-QX-mmp"/>
+                        <outlet property="viewPlay" destination="Jod-f1-p8l" id="5Xa-YR-c19"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.625" y="94.20289855072464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
